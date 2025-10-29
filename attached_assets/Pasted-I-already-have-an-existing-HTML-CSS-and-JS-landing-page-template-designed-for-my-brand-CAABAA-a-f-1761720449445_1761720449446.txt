@@ -1,0 +1,101 @@
+I already have an existing HTML, CSS, and JS landing page template designed for my brand CAABAA, a futuristic car modification and accessories company. The theme and design system are already created — I just need to add and modify some sections according to the following layout and structure. Please use a futuristic, neon-inspired, tech-forward style that fits the brand theme (think sleek UI, glassmorphism, glowing effects, and smooth animations).
+
+Here’s what I want to include or modify:
+
+1. Header Section:
+
+Keep existing styling, just ensure it includes navigation links to all new sections:
+
+Home, About, Modifications, Accessories, Insurance, Why CAABAA, Contact
+
+Include the CAABAA logo (already available) on the left.
+
+On the right: “Login” and “Signup” buttons with hover glow effects.
+
+2. Hero Section:
+
+Replace current hero background with an AI-generated futuristic car video background.
+
+Add overlay gradient or neon effects for readability.
+
+Include a bold heading, subtext, and a CTA button (“Explore Modifications”).
+
+3. Three Alternating Image & Text Sections:
+
+Section 1: Image on left, text on right.
+
+Section 2: Image on right, text on left.
+
+Section 3: Image on left, text on right.
+
+Add an animated futuristic car that scrolls or transitions visually across these three sections (like a smooth driving animation).
+
+Use AI-generated placeholder images that look high-tech and match car modification themes.
+
+4. Trending Modifications Section:
+
+Carousel with 3 slides showcasing trending car modifications.
+
+Each slide should have an image, title, and brief description.
+
+Generate AI placeholder images with a futuristic look for each.
+
+5. Trending Accessories Carousel:
+
+Carousel with 4 slides displaying trending accessories.
+
+Each slide should feature an AI-generated image, product name, and short caption.
+
+6. New Launches Section:
+
+Another carousel with 4 slides featuring new accessory launches.
+
+Use similar layout but with “New Launch” tags or effects.
+
+7. Car Insurance Section:
+
+Carousel with 3 slides showing different insurance offers or plans.
+
+Add a CTA button (“Get Your Quote”) on the last slide.
+
+8. “Why CAABAA” Section:
+
+Split layout:
+
+Left: Large “Why CAABAA” heading with subtle glow effect.
+
+Right: List of 4–6 key selling points, each prefixed by an arrow or futuristic icon.
+
+9. CTA Section (Conversion Section):
+
+Left side: motivational text (“Upgrade Your Ride Today”).
+
+Right side: prominent CTA button (“Start Modifying”).
+
+Add glowing animation on button hover.
+
+10. Footer:
+
+Include:
+
+CAABAA logo (small version).
+
+Short brand description.
+
+Social media icons (glow or hover effects).
+
+Quick links (Home, About, Contact, etc.).
+
+Newsletter subscription box with glowing input border.
+
+Notes:
+
+The theme is already created, just modify the existing template to include these new sections.
+
+Maintain responsiveness and use existing color palette and style.
+
+Use subtle futuristic animations and transitions (e.g., car motion, hover glow, parallax scrolling).
+
+Generate AI placeholder images for all new content areas (use realistic, modern car and tech themes).
+
+Deliver the final structure in HTML, CSS, and JS integrated with the existing codebase.
