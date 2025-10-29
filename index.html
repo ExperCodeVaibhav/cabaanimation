@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAABAA - Futuristic Car Modifications & Accessories</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- ========================================
+         HEADER SECTION
+         Navigation bar with logo, menu links, and auth buttons
+         Includes sticky positioning and glassmorphism effect
+    ========================================= -->
+    <header id="header" class="header-nav">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                
+                <!-- Logo Section -->
+                <div class="logo-container">
+                    <a href="#home" class="text-3xl font-bold neon-text">CAABAA</a>
+                </div>
+                
+                <!-- Navigation Menu - Desktop -->
+                <div class="hidden md:flex space-x-8 nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#modifications" class="nav-link">Modifications</a>
+                    <a href="#accessories" class="nav-link">Accessories</a>
+                    <a href="#insurance" class="nav-link">Insurance</a>
+                    <a href="#why-caabaa" class="nav-link">Why CAABAA</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex space-x-4">
+                    <button class="auth-btn login-btn">Login</button>
+                    <button class="auth-btn signup-btn">Signup</button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl neon-text"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu - Hidden by default -->
+            <div class="mobile-menu hidden" id="mobile-menu">
+                <a href="#home" class="nav-link-mobile">Home</a>
+                <a href="#about" class="nav-link-mobile">About</a>
+                <a href="#modifications" class="nav-link-mobile">Modifications</a>
+                <a href="#accessories" class="nav-link-mobile">Accessories</a>
+                <a href="#insurance" class="nav-link-mobile">Insurance</a>
+                <a href="#why-caabaa" class="nav-link-mobile">Why CAABAA</a>
+                <a href="#contact" class="nav-link-mobile">Contact</a>
+                <div class="flex flex-col space-y-3 mt-4">
+                    <button class="auth-btn login-btn">Login</button>
+                    <button class="auth-btn signup-btn">Signup</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+         Full-screen hero with video background, gradient overlay,
+         bold heading, subtext, and CTA button
+    ========================================= -->
+    <section id="home" class="hero-section">
+        <!-- Video Background Container -->
+        <div class="hero-video-bg">
+            <!-- Placeholder for video - Replace with actual video -->
+            <div class="video-placeholder"></div>
+        </div>
+        
+        <!-- Gradient Overlay for Text Readability -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                Welcome to the Future of <span class="neon-text">Car Modification</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Transform your ride with cutting-edge modifications and futuristic accessories
+            </p>
+            <button class="cta-btn hero-cta" data-aos="fade-up" data-aos-delay="400">
+                Explore Modifications
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION - THREE ALTERNATING IMAGE & TEXT SECTIONS
+         Section 1: Image Left, Text Right
+         Section 2: Image Right, Text Left
+         Section 3: Image Left, Text Right
+         Includes animated car element transitioning across sections
+    ========================================= -->
+    <section id="about" class="py-20 bg-dark relative overflow-hidden">
+        
+        <!-- Animated Car Element -->
+        <div class="animated-car" id="animated-car">
+            <i class="fas fa-car-side"></i>
+        </div>
+        
+        <!-- About Section 1 - Image Left, Text Right -->
+        <div class="container mx-auto px-6 mb-32">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Container -->
+                <div class="about-image-container" data-aos="fade-right">
+                    <div class="glass-card">
+                        <img src="placeholder-modification-1.jpg" alt="Advanced Car Modification" class="about-image" id="about-img-1">
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="about-text-container" data-aos="fade-left">
+                    <h2 class="section-title">Cutting-Edge <span class="neon-text">Technology</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Experience the next generation of automotive enhancement with our state-of-the-art modification systems. 
+                        We integrate AI-powered diagnostics and quantum computing to deliver unprecedented performance upgrades.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Our technology transforms your vehicle into a smart, connected machine that adapts to your driving style 
+                        and environmental conditions in real-time.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Section 2 - Image Right, Text Left -->
+        <div class="container mx-auto px-6 mb-32">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="about-text-container" data-aos="fade-right">
+                    <h2 class="section-title">Premium <span class="neon-text">Craftsmanship</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Every modification is meticulously crafted by our team of expert engineers and designers. 
+                        We use only the finest materials and advanced manufacturing techniques to ensure durability and performance.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        From carbon fiber body kits to holographic dashboard displays, each component is designed to 
+                        elevate your vehicle's aesthetics and functionality to unprecedented levels.
+                    </p>
+                </div>
+                
+                <!-- Image Container -->
+                <div class="about-image-container" data-aos="fade-left">
+                    <div class="glass-card">
+                        <img src="placeholder-modification-2.jpg" alt="Premium Craftsmanship" class="about-image" id="about-img-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Section 3 - Image Left, Text Right -->
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Container -->
+                <div class="about-image-container" data-aos="fade-right">
+                    <div class="glass-card">
+                        <img src="placeholder-modification-3.jpg" alt="Future-Ready Design" class="about-image" id="about-img-3">
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="about-text-container" data-aos="fade-left">
+                    <h2 class="section-title">Future-Ready <span class="neon-text">Design</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Step into tomorrow with designs that push the boundaries of automotive aesthetics. 
+                        Our futuristic modifications blend form and function seamlessly, creating vehicles that turn heads.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        With neon underglow systems, dynamic LED arrays, and aerodynamic enhancements, your car 
+                        becomes a rolling work of art that dominates the streets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TRENDING MODIFICATIONS SECTION
+         Carousel with 3 slides showcasing popular modifications
+         Each slide includes image, title, and description
+    ========================================= -->
+    <section id="modifications" class="py-20 bg-gradient-dark">
+        <div class="container mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title-large">Trending <span class="neon-text">Modifications</span></h2>
+                <p class="text-gray-400 text-lg mt-4">Discover the most popular upgrades chosen by our community</p>
+            </div>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="modifications-carousel">
+                    
+                    <!-- Slide 1 - Neural Performance Chip -->
+                    <div class="carousel-slide active">
+                        <div class="glass-card-carousel">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-mod-1.jpg" alt="Neural Performance Chip" class="carousel-image" id="mod-img-1">
+                                <div class="trending-badge">
+                                    <i class="fas fa-fire"></i> Trending
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Neural Performance Chip</h3>
+                                <p class="carousel-description">
+                                    AI-powered ECU optimization that learns your driving patterns and maximizes engine performance 
+                                    with up to 35% power increase and 20% fuel efficiency improvement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Holographic HUD System -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-mod-2.jpg" alt="Holographic HUD" class="carousel-image" id="mod-img-2">
+                                <div class="trending-badge">
+                                    <i class="fas fa-fire"></i> Trending
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Holographic HUD System</h3>
+                                <p class="carousel-description">
+                                    Project critical driving information directly onto your windshield with our advanced AR technology. 
+                                    Features real-time navigation, speed, and vehicle diagnostics in stunning 3D graphics.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 - Quantum Suspension -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-mod-3.jpg" alt="Quantum Suspension" class="carousel-image" id="mod-img-3">
+                                <div class="trending-badge">
+                                    <i class="fas fa-fire"></i> Trending
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title">Quantum Suspension System</h3>
+                                <p class="carousel-description">
+                                    Adaptive electromagnetic suspension that adjusts in microseconds to road conditions. 
+                                    Experience cloud-like comfort and razor-sharp handling with predictive technology.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('modifications-carousel', -1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('modifications-carousel', 1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="modifications-indicators">
+                    <span class="indicator active" onclick="goToSlide('modifications-carousel', 0)"></span>
+                    <span class="indicator" onclick="goToSlide('modifications-carousel', 1)"></span>
+                    <span class="indicator" onclick="goToSlide('modifications-carousel', 2)"></span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         TRENDING ACCESSORIES SECTION
+         Carousel with 4 slides displaying popular accessories
+         Each slide features product image, name, and caption
+    ========================================= -->
+    <section id="accessories" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title-large">Trending <span class="neon-text">Accessories</span></h2>
+                <p class="text-gray-400 text-lg mt-4">Elevate your driving experience with premium add-ons</p>
+            </div>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper accessories-grid" id="accessories-carousel">
+                    
+                    <!-- Slide 1 - Neon Underglow Kit -->
+                    <div class="carousel-slide active">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-acc-1.jpg" alt="Neon Underglow Kit" class="carousel-image" id="acc-img-1">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Neon Underglow Kit</h3>
+                                <p class="carousel-caption">16 million color options with app control</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Smart Dash Cam -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-acc-2.jpg" alt="AI Dash Cam" class="carousel-image" id="acc-img-2">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">AI Smart Dash Cam</h3>
+                                <p class="carousel-caption">360° coverage with incident detection</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 - Wireless Charging Pad -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-acc-3.jpg" alt="Wireless Charging" class="carousel-image" id="acc-img-3">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Quantum Wireless Charger</h3>
+                                <p class="carousel-caption">Fast charging with LED ambient lighting</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 - Performance Pedals -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-acc-4.jpg" alt="Performance Pedals" class="carousel-image" id="acc-img-4">
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Titanium Sport Pedals</h3>
+                                <p class="carousel-caption">Aerospace-grade precision control</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('accessories-carousel', -1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('accessories-carousel', 1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="accessories-indicators">
+                    <span class="indicator active" onclick="goToSlide('accessories-carousel', 0)"></span>
+                    <span class="indicator" onclick="goToSlide('accessories-carousel', 1)"></span>
+                    <span class="indicator" onclick="goToSlide('accessories-carousel', 2)"></span>
+                    <span class="indicator" onclick="goToSlide('accessories-carousel', 3)"></span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         NEW LAUNCHES SECTION
+         Carousel with 4 slides featuring new product launches
+         Includes 'New Launch' tags and special effects
+    ========================================= -->
+    <section id="new-launches" class="py-20 bg-gradient-dark">
+        <div class="container mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title-large">New <span class="neon-text">Launches</span></h2>
+                <p class="text-gray-400 text-lg mt-4">Be the first to experience our latest innovations</p>
+            </div>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper accessories-grid" id="launches-carousel">
+                    
+                    <!-- Slide 1 - Plasma Headlight System -->
+                    <div class="carousel-slide active">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-launch-1.jpg" alt="Plasma Headlights" class="carousel-image" id="launch-img-1">
+                                <div class="new-launch-badge">
+                                    <i class="fas fa-star"></i> NEW
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Plasma Headlight System</h3>
+                                <p class="carousel-caption">300% brighter with adaptive beam control</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Biometric Security -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-launch-2.jpg" alt="Biometric Security" class="carousel-image" id="launch-img-2">
+                                <div class="new-launch-badge">
+                                    <i class="fas fa-star"></i> NEW
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Biometric Security Suite</h3>
+                                <p class="carousel-caption">Fingerprint & retina scan ignition</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 - Nano Coating -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-launch-3.jpg" alt="Nano Coating" class="carousel-image" id="launch-img-3">
+                                <div class="new-launch-badge">
+                                    <i class="fas fa-star"></i> NEW
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">Self-Healing Nano Coating</h3>
+                                <p class="carousel-caption">Scratch-resistant hydrophobic finish</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 - Voice AI Assistant -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel accessory-card">
+                            <div class="carousel-image-container">
+                                <img src="placeholder-launch-4.jpg" alt="Voice AI" class="carousel-image" id="launch-img-4">
+                                <div class="new-launch-badge">
+                                    <i class="fas fa-star"></i> NEW
+                                </div>
+                            </div>
+                            <div class="carousel-content">
+                                <h3 class="carousel-title-small">CAABAA Voice AI</h3>
+                                <p class="carousel-caption">Your intelligent co-pilot assistant</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('launches-carousel', -1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('launches-carousel', 1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="launches-indicators">
+                    <span class="indicator active" onclick="goToSlide('launches-carousel', 0)"></span>
+                    <span class="indicator" onclick="goToSlide('launches-carousel', 1)"></span>
+                    <span class="indicator" onclick="goToSlide('launches-carousel', 2)"></span>
+                    <span class="indicator" onclick="goToSlide('launches-carousel', 3)"></span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         CAR INSURANCE SECTION
+         Carousel with 3 slides showing insurance plans
+         Includes CTA button on last slide
+    ========================================= -->
+    <section id="insurance" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title-large">Car <span class="neon-text">Insurance</span></h2>
+                <p class="text-gray-400 text-lg mt-4">Protect your investment with comprehensive coverage</p>
+            </div>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="insurance-carousel">
+                    
+                    <!-- Slide 1 - Basic Plan -->
+                    <div class="carousel-slide active">
+                        <div class="glass-card-carousel insurance-card">
+                            <div class="insurance-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="carousel-content text-center">
+                                <h3 class="carousel-title">Basic Shield</h3>
+                                <div class="insurance-price">$99<span>/month</span></div>
+                                <ul class="insurance-features">
+                                    <li><i class="fas fa-check"></i> Collision Coverage</li>
+                                    <li><i class="fas fa-check"></i> Liability Protection</li>
+                                    <li><i class="fas fa-check"></i> 24/7 Roadside Assistance</li>
+                                    <li><i class="fas fa-check"></i> Theft Protection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Premium Plan -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel insurance-card premium-plan">
+                            <div class="insurance-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="popular-badge">MOST POPULAR</div>
+                            <div class="carousel-content text-center">
+                                <h3 class="carousel-title">Premium Guard</h3>
+                                <div class="insurance-price">$179<span>/month</span></div>
+                                <ul class="insurance-features">
+                                    <li><i class="fas fa-check"></i> Everything in Basic</li>
+                                    <li><i class="fas fa-check"></i> Comprehensive Coverage</li>
+                                    <li><i class="fas fa-check"></i> Modification Protection</li>
+                                    <li><i class="fas fa-check"></i> Gap Insurance</li>
+                                    <li><i class="fas fa-check"></i> Rental Car Coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 - Elite Plan with CTA -->
+                    <div class="carousel-slide">
+                        <div class="glass-card-carousel insurance-card">
+                            <div class="insurance-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="carousel-content text-center">
+                                <h3 class="carousel-title">Elite Protection</h3>
+                                <div class="insurance-price">$299<span>/month</span></div>
+                                <ul class="insurance-features">
+                                    <li><i class="fas fa-check"></i> Everything in Premium</li>
+                                    <li><i class="fas fa-check"></i> Zero Deductible</li>
+                                    <li><i class="fas fa-check"></i> Track Day Coverage</li>
+                                    <li><i class="fas fa-check"></i> Concierge Service</li>
+                                    <li><i class="fas fa-check"></i> Worldwide Coverage</li>
+                                </ul>
+                                <button class="cta-btn mt-6">
+                                    Get Your Quote
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('insurance-carousel', -1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('insurance-carousel', 1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="insurance-indicators">
+                    <span class="indicator active" onclick="goToSlide('insurance-carousel', 0)"></span>
+                    <span class="indicator" onclick="goToSlide('insurance-carousel', 1)"></span>
+                    <span class="indicator" onclick="goToSlide('insurance-carousel', 2)"></span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         WHY CAABAA SECTION
+         Split layout with glowing heading and key selling points
+         Left: Large heading with glow effect
+         Right: List of benefits with futuristic icons
+    ========================================= -->
+    <section id="why-caabaa" class="py-20 bg-gradient-dark">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Side - Large Heading -->
+                <div class="text-center md:text-left" data-aos="fade-right">
+                    <h2 class="why-caabaa-title">
+                        Why Choose<br>
+                        <span class="neon-text-large">CAABAA</span>?
+                    </h2>
+                </div>
+                
+                <!-- Right Side - Benefits List -->
+                <div class="space-y-8" data-aos="fade-left">
+                    
+                    <!-- Benefit 1 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">Cutting-Edge Innovation</h3>
+                            <p class="benefit-description">
+                                We pioneer automotive technology with AI-driven solutions and quantum engineering
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">Premium Quality Guarantee</h3>
+                            <p class="benefit-description">
+                                Every product undergoes rigorous testing and comes with lifetime warranty
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">Expert Installation Team</h3>
+                            <p class="benefit-description">
+                                Certified technicians with 15+ years experience in automotive modifications
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 4 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">24/7 Customer Support</h3>
+                            <p class="benefit-description">
+                                Round-the-clock assistance via phone, chat, and AR-powered remote guidance
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 5 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">Global Network</h3>
+                            <p class="benefit-description">
+                                Service centers in 50+ countries with worldwide shipping and support
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 6 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h3 class="benefit-title">Secure & Certified</h3>
+                            <p class="benefit-description">
+                                ISO-certified processes and bank-level security for all transactions
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA CONVERSION SECTION
+         Split layout with motivational text and prominent CTA button
+         Includes glowing animation on button hover
+    ========================================= -->
+    <section id="contact" class="cta-section">
+        <div class="container mx-auto px-6">
+            
+            <div class="cta-container">
+                
+                <!-- Left Side - Motivational Text -->
+                <div class="cta-text" data-aos="fade-right">
+                    <h2 class="cta-heading">
+                        Upgrade Your Ride <span class="neon-text">Today</span>
+                    </h2>
+                    <p class="cta-subtext">
+                        Join thousands of satisfied customers who transformed their vehicles into futuristic masterpieces. 
+                        Your journey to automotive excellence starts here.
+                    </p>
+                </div>
+                
+                <!-- Right Side - CTA Button -->
+                <div class="cta-button-container" data-aos="fade-left">
+                    <button class="cta-btn-large">
+                        Start Modifying
+                        <i class="fas fa-rocket ml-3"></i>
+                    </button>
+                    <p class="cta-note">No credit card required • Free consultation</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER SECTION
+         Company info, social links, quick navigation, and newsletter
+         Includes hover effects on social icons and glowing input border
+    ========================================= -->
+    <footer class="footer">
+        <div class="container mx-auto px-6">
+            
+            <!-- Footer Top Section -->
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Column 1 - Brand Info -->
+                <div>
+                    <div class="footer-logo mb-4">
+                        <h3 class="text-2xl font-bold neon-text">CAABAA</h3>
+                    </div>
+                    <p class="footer-description">
+                        Pioneering the future of automotive modification with cutting-edge technology 
+                        and unparalleled craftsmanship since 2025.
+                    </p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-icons mt-6">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 - Quick Links -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#modifications">Modifications</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                        <li><a href="#insurance">Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 - Support -->
+                <div>
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#warranty">Warranty</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 - Newsletter -->
+                <div>
+                    <h4 class="footer-heading">Stay Updated</h4>
+                    <p class="footer-description mb-4">
+                        Subscribe to our newsletter for exclusive offers and updates.
+                    </p>
+                    
+                    <!-- Newsletter Form -->
+                    <form class="newsletter-form">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="newsletter-input"
+                            required
+                        >
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+            
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 CAABAA. All rights reserved. Built for the future.</p>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
