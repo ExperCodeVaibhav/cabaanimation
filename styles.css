@@ -1,42 +1,35 @@
 /* ========================================
    CAABAA LANDING PAGE - CUSTOM STYLES
-   Futuristic car modification brand theme
-   Features: Neon effects, glassmorphism, smooth animations
+   Clean and simple car modification brand theme
    ======================================== */
 
 /* ========================================
    ROOT VARIABLES & COLOR PALETTE
-   Define custom properties for consistent theming
+   Simple, clean colors
    ======================================== */
 :root {
-    /* Neon Colors - Primary brand colors */
-    --neon-blue: #00f7ff;
-    --neon-purple: #b800ff;
-    --neon-pink: #ff006e;
-    --neon-green: #00ff88;
+    /* Primary Colors */
+    --primary-blue: #3b82f6;
+    --primary-purple: #8b5cf6;
+    --accent-color: #6366f1;
     
-    /* Background Colors - Dark theme palette */
-    --bg-dark: #0a0a0f;
-    --bg-darker: #050507;
-    --bg-card: rgba(20, 20, 30, 0.6);
+    /* Background Colors */
+    --bg-dark: #1a1a2e;
+    --bg-darker: #0f0f1e;
+    --bg-card: #252540;
     
     /* Text Colors */
     --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --text-muted: #6b6b6b;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
     
-    /* Glass effect properties */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    
-    /* Spacing and sizing */
-    --section-padding: 5rem 0;
-    --border-radius: 1rem;
+    /* Border and spacing */
+    --border-color: #334155;
+    --border-radius: 0.5rem;
 }
 
 /* ========================================
    GLOBAL RESET & BASE STYLES
-   Normalize default browser styles
    ======================================== */
 * {
     margin: 0;
@@ -45,21 +38,20 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-primary);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
 }
 
 /* ========================================
    HEADER & NAVIGATION SECTION
-   Sticky header with glassmorphism effect
+   Sticky header with simple styling
    ======================================== */
 .header-nav {
     position: fixed;
@@ -67,9 +59,8 @@ html {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-darker);
+    border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
@@ -79,35 +70,23 @@ html {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    padding-bottom: 2px;
+    transition: color 0.3s ease;
 }
 
-/* Hover effect with neon underline */
 .nav-link:hover {
-    color: var(--neon-blue);
+    color: var(--primary-blue);
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
+/* Logo styling */
+.logo-container a {
+    color: var(--primary-blue);
+    text-decoration: none;
 }
 
 /* Authentication buttons styling */
 .auth-btn {
     padding: 0.6rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
@@ -115,63 +94,58 @@ html {
     border: none;
 }
 
-/* Login button - Outline style with glow effect */
 .login-btn {
     background: transparent;
-    color: var(--neon-blue);
-    border: 2px solid var(--neon-blue);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
 }
 
 .login-btn:hover {
-    background: var(--neon-blue);
-    color: var(--bg-dark);
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+    background: var(--primary-blue);
+    color: white;
 }
 
-/* Signup button - Solid fill with glow effect */
 .signup-btn {
-    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    background: var(--primary-purple);
     color: white;
-    border: 2px solid transparent;
+    border: 2px solid var(--primary-purple);
 }
 
 .signup-btn:hover {
-    box-shadow: 0 0 30px rgba(184, 0, 255, 0.6);
-    transform: translateY(-2px);
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
 }
 
-/* Mobile menu toggle button */
+/* Mobile menu */
 .mobile-menu-btn {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--neon-blue);
+    color: var(--primary-blue);
 }
 
-/* Mobile menu dropdown */
 .mobile-menu {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 0;
     margin-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-color);
 }
 
 .nav-link-mobile {
     color: var(--text-secondary);
     text-decoration: none;
     padding: 0.8rem 0;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-link-mobile:hover {
-    color: var(--neon-blue);
-    padding-left: 1rem;
+    color: var(--primary-blue);
 }
 
 /* ========================================
    HERO SECTION
-   Full-screen hero with video background
+   Full-screen hero with gradient background
    ======================================== */
 .hero-section {
     position: relative;
@@ -182,7 +156,6 @@ html {
     overflow: hidden;
 }
 
-/* Video background container */
 .hero-video-bg {
     position: absolute;
     top: 0;
@@ -192,36 +165,22 @@ html {
     z-index: 1;
 }
 
-/* Placeholder for video - will be replaced with actual video */
 .video-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
-    animation: gradientShift 15s ease infinite;
+    background: linear-gradient(135deg, #1a1a2e 0%, #252540 100%);
 }
 
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Gradient overlay for text readability */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 10, 15, 0.3) 0%,
-        rgba(10, 10, 15, 0.7) 50%,
-        rgba(10, 10, 15, 0.9) 100%
-    );
+    background: linear-gradient(to bottom, rgba(26, 26, 46, 0.5) 0%, rgba(26, 26, 46, 0.8) 100%);
     z-index: 2;
 }
 
-/* Hero content container */
 .hero-content {
     position: relative;
     z-index: 3;
@@ -230,45 +189,43 @@ html {
     max-width: 1000px;
 }
 
-/* Hero title with large font */
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 40px rgba(0, 247, 255, 0.5);
 }
 
-/* Hero subtitle */
+.hero-title .neon-text {
+    color: var(--primary-blue);
+}
+
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
     font-weight: 300;
 }
 
-/* Main CTA button styling */
 .cta-btn {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    background: var(--primary-blue);
     color: white;
     border: none;
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 10px 40px rgba(0, 247, 255, 0.3);
 }
 
 .cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 60px rgba(0, 247, 255, 0.6);
+    background: var(--primary-purple);
+    transform: translateY(-2px);
 }
 
-/* Scroll indicator animation */
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
@@ -280,7 +237,7 @@ html {
 
 .scroll-indicator i {
     font-size: 2rem;
-    color: var(--neon-blue);
+    color: var(--primary-blue);
 }
 
 @keyframes bounce {
@@ -289,29 +246,19 @@ html {
 }
 
 /* ========================================
-   NEON TEXT EFFECT
-   Glowing text with shadow effects
+   TEXT STYLING
+   Simple, clean text with accent colors
    ======================================== */
 .neon-text {
-    color: var(--neon-blue);
-    text-shadow: 
-        0 0 10px rgba(0, 247, 255, 0.8),
-        0 0 20px rgba(0, 247, 255, 0.6),
-        0 0 30px rgba(0, 247, 255, 0.4);
+    color: var(--primary-blue);
 }
 
 .neon-text-large {
-    color: var(--neon-blue);
-    text-shadow: 
-        0 0 20px rgba(0, 247, 255, 0.9),
-        0 0 40px rgba(0, 247, 255, 0.7),
-        0 0 60px rgba(0, 247, 255, 0.5),
-        0 0 80px rgba(0, 247, 255, 0.3);
+    color: var(--primary-blue);
 }
 
 /* ========================================
    BACKGROUND VARIATIONS
-   Different background styles for sections
    ======================================== */
 .bg-dark {
     background-color: var(--bg-dark);
@@ -323,26 +270,22 @@ html {
 
 /* ========================================
    ABOUT SECTION - ALTERNATING LAYOUTS
-   Image and text content with animations
    ======================================== */
 .about-image-container {
     position: relative;
 }
 
-/* Glass card effect for image containers */
 .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 1.5rem;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 20px 60px rgba(0, 247, 255, 0.3);
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
 }
 
 .about-image {
@@ -352,7 +295,6 @@ html {
     object-fit: cover;
 }
 
-/* Section title styling */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -361,38 +303,30 @@ html {
 }
 
 .section-title-large {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
 }
 
-/* Animated car element that moves across sections */
 .animated-car {
     position: absolute;
     top: 50%;
     left: -100px;
     font-size: 4rem;
-    color: var(--neon-blue);
-    opacity: 0.3;
+    color: var(--primary-blue);
+    opacity: 0.2;
     z-index: 10;
     animation: driveCar 20s linear infinite;
-    filter: drop-shadow(0 0 20px rgba(0, 247, 255, 0.6));
 }
 
 @keyframes driveCar {
-    0% {
-        left: -100px;
-        transform: translateY(-50%) rotate(0deg);
-    }
-    100% {
-        left: calc(100% + 100px);
-        transform: translateY(-50%) rotate(0deg);
-    }
+    0% { left: -100px; }
+    100% { left: calc(100% + 100px); }
 }
 
 /* ========================================
    CAROUSEL COMPONENTS
-   Reusable carousel for multiple sections
+   Clean carousel styling
    ======================================== */
 .carousel-container {
     position: relative;
@@ -404,9 +338,9 @@ html {
 .carousel-wrapper {
     position: relative;
     width: 100%;
+    min-height: 500px;
 }
 
-/* Individual carousel slide */
 .carousel-slide {
     display: none;
     width: 100%;
@@ -419,23 +353,19 @@ html {
     opacity: 1;
 }
 
-/* Glass card for carousel items */
 .glass-card-carousel {
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .glass-card-carousel:hover {
-    border-color: var(--neon-purple);
-    box-shadow: 0 20px 60px rgba(184, 0, 255, 0.3);
+    border-color: var(--primary-blue);
     transform: translateY(-5px);
 }
 
-/* Carousel image container */
 .carousel-image-container {
     position: relative;
     width: 100%;
@@ -447,14 +377,8 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.glass-card-carousel:hover .carousel-image {
-    transform: scale(1.1);
-}
-
-/* Carousel content section */
 .carousel-content {
     padding: 2rem;
 }
@@ -483,49 +407,45 @@ html {
     font-size: 0.95rem;
 }
 
-/* Trending badge for modifications */
+/* Badges */
 .trending-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: linear-gradient(135deg, #ff006e, #ff4500);
+    background: #dc2626;
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     font-size: 0.85rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 5px 20px rgba(255, 0, 110, 0.4);
 }
 
-/* New launch badge */
 .new-launch-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: linear-gradient(135deg, var(--neon-green), #00cc6a);
-    color: var(--bg-dark);
+    background: #10b981;
+    color: white;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     font-size: 0.85rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
 }
 
-/* Carousel navigation buttons */
+/* Carousel buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 2px solid var(--glass-border);
-    color: var(--neon-blue);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    color: var(--primary-blue);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -539,10 +459,9 @@ html {
 }
 
 .carousel-btn:hover {
-    background: var(--neon-blue);
-    color: var(--bg-dark);
-    border-color: var(--neon-blue);
-    box-shadow: 0 0 30px rgba(0, 247, 255, 0.6);
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
 }
 
 .carousel-btn-prev {
@@ -553,7 +472,7 @@ html {
     right: -25px;
 }
 
-/* Carousel indicators/dots */
+/* Carousel indicators */
 .carousel-indicators {
     display: flex;
     justify-content: center;
@@ -565,35 +484,42 @@ html {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--glass-border);
-    border: 2px solid var(--glass-border);
+    background: var(--border-color);
+    border: 2px solid var(--border-color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .indicator.active {
-    background: var(--neon-blue);
-    border-color: var(--neon-blue);
-    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
 }
 
 .indicator:hover {
-    background: var(--neon-purple);
-    border-color: var(--neon-purple);
+    background: var(--primary-purple);
+    border-color: var(--primary-purple);
 }
 
-/* Accessories grid layout */
+/* Accessories grid - show all on desktop, carousel on mobile */
 .accessories-grid .carousel-slide {
-    display: block;
-    opacity: 1;
-}
-
-.accessories-grid.showing-single .carousel-slide {
     display: none;
 }
 
-.accessories-grid.showing-single .carousel-slide.active {
+.accessories-grid .carousel-slide.active {
     display: block;
+}
+
+@media (min-width: 768px) {
+    .accessories-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .accessories-grid .carousel-slide {
+        display: block !important;
+        opacity: 1 !important;
+    }
 }
 
 .accessory-card {
@@ -606,7 +532,6 @@ html {
 
 /* ========================================
    INSURANCE SECTION
-   Pricing cards with features list
    ======================================== */
 .insurance-card {
     text-align: center;
@@ -616,14 +541,14 @@ html {
 
 .insurance-icon {
     font-size: 4rem;
-    color: var(--neon-blue);
+    color: var(--primary-blue);
     margin-bottom: 1.5rem;
 }
 
 .insurance-price {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    color: var(--neon-blue);
+    color: var(--primary-blue);
     margin: 1rem 0;
 }
 
@@ -642,26 +567,25 @@ html {
 .insurance-features li {
     padding: 0.8rem 0;
     color: var(--text-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .insurance-features li i {
-    color: var(--neon-green);
+    color: #10b981;
     margin-right: 0.8rem;
 }
 
-/* Premium plan highlight */
 .premium-plan {
-    border: 2px solid var(--neon-purple);
-    background: linear-gradient(135deg, rgba(184, 0, 255, 0.1), rgba(0, 247, 255, 0.05));
+    border: 2px solid var(--primary-purple);
+    background: rgba(139, 92, 246, 0.1);
 }
 
 .premium-plan .insurance-icon {
-    color: var(--neon-purple);
+    color: var(--primary-purple);
 }
 
 .premium-plan .insurance-price {
-    color: var(--neon-purple);
+    color: var(--primary-purple);
 }
 
 .popular-badge {
@@ -669,21 +593,19 @@ html {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    background: var(--primary-purple);
     color: white;
     padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     font-size: 0.8rem;
     font-weight: 700;
-    box-shadow: 0 5px 20px rgba(184, 0, 255, 0.4);
 }
 
 /* ========================================
    WHY CAABAA SECTION
-   Split layout with benefits list
    ======================================== */
 .why-caabaa-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
     line-height: 1.2;
 }
@@ -694,24 +616,24 @@ html {
     align-items: flex-start;
     transition: all 0.3s ease;
     padding: 1.5rem;
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
 }
 
 .benefit-item:hover {
-    background: var(--glass-bg);
+    background: var(--bg-card);
     transform: translateX(10px);
 }
 
 .benefit-icon {
     min-width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    border-radius: 1rem;
+    background: var(--primary-blue);
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+    color: white;
 }
 
 .benefit-title {
@@ -728,13 +650,10 @@ html {
 
 /* ========================================
    CTA CONVERSION SECTION
-   Final call-to-action with large button
    ======================================== */
 .cta-section {
     padding: 8rem 0;
-    background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(184, 0, 255, 0.1));
-    position: relative;
-    overflow: hidden;
+    background: var(--bg-dark);
 }
 
 .cta-container {
@@ -745,7 +664,7 @@ html {
 }
 
 .cta-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -765,31 +684,19 @@ html {
     padding: 1.5rem 3.5rem;
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+    background: var(--primary-blue);
     color: white;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 15px 50px rgba(0, 247, 255, 0.4);
-    animation: pulse 2s infinite;
 }
 
 .cta-btn-large:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 25px 80px rgba(0, 247, 255, 0.7);
-    animation: none;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: 0 15px 50px rgba(0, 247, 255, 0.4);
-    }
-    50% {
-        box-shadow: 0 15px 50px rgba(0, 247, 255, 0.7);
-    }
+    background: var(--primary-purple);
+    transform: translateY(-3px);
 }
 
 .cta-note {
@@ -800,16 +707,11 @@ html {
 
 /* ========================================
    FOOTER SECTION
-   Company info, links, and newsletter
    ======================================== */
 .footer {
     background: var(--bg-darker);
     padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-logo {
-    margin-bottom: 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-description {
@@ -836,15 +738,13 @@ html {
 .footer-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--neon-blue);
-    padding-left: 0.5rem;
+    color: var(--primary-blue);
 }
 
-/* Social media icons */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -853,10 +753,10 @@ html {
 .social-icon {
     width: 45px;
     height: 45px;
-    border-radius: 0.5rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    color: var(--neon-blue);
+    border-radius: 0.375rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--primary-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -866,14 +766,11 @@ html {
 }
 
 .social-icon:hover {
-    background: var(--neon-blue);
-    color: var(--bg-dark);
-    border-color: var(--neon-blue);
-    box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
-    transform: translateY(-3px);
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
 }
 
-/* Newsletter form */
 .newsletter-form {
     display: flex;
     gap: 0.5rem;
@@ -882,18 +779,17 @@ html {
 .newsletter-input {
     flex: 1;
     padding: 0.9rem 1.2rem;
-    background: var(--glass-bg);
-    border: 2px solid var(--glass-border);
-    border-radius: 0.5rem;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 0.375rem;
     color: var(--text-primary);
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
 .newsletter-input:focus {
     outline: none;
-    border-color: var(--neon-blue);
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+    border-color: var(--primary-blue);
 }
 
 .newsletter-input::placeholder {
@@ -902,9 +798,9 @@ html {
 
 .newsletter-btn {
     padding: 0.9rem 1.5rem;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    background: var(--primary-blue);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
@@ -912,15 +808,13 @@ html {
 }
 
 .newsletter-btn:hover {
-    box-shadow: 0 0 30px rgba(0, 247, 255, 0.6);
-    transform: scale(1.05);
+    background: var(--primary-purple);
 }
 
-/* Footer bottom section */
 .footer-bottom {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-color);
     text-align: center;
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -928,10 +822,7 @@ html {
 
 /* ========================================
    RESPONSIVE DESIGN
-   Mobile and tablet breakpoints
    ======================================== */
-
-/* Tablet and below */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -982,7 +873,6 @@ html {
     }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
     .hero-title {
         font-size: 1.8rem;
@@ -1008,7 +898,6 @@ html {
 
 /* ========================================
    UTILITY CLASSES
-   Helper classes for spacing and display
    ======================================== */
 .hidden {
     display: none !important;
@@ -1018,7 +907,6 @@ html {
     max-width: 1400px;
 }
 
-/* Fade-in animation for scroll effects */
 @keyframes fadeIn {
     from {
         opacity: 0;
