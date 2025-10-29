@@ -500,28 +500,7 @@ html {
     border-color: var(--primary-purple);
 }
 
-/* Accessories grid - show all on desktop, carousel on mobile */
-.accessories-grid .carousel-slide {
-    display: none;
-}
-
-.accessories-grid .carousel-slide.active {
-    display: block;
-}
-
-@media (min-width: 768px) {
-    .accessories-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .accessories-grid .carousel-slide {
-        display: block !important;
-        opacity: 1 !important;
-    }
-}
-
+/* Accessories carousel - always show one slide at a time */
 .accessory-card {
     height: 100%;
 }

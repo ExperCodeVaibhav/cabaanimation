@@ -163,40 +163,14 @@ const carouselStates = {
 
 /**
  * Initialize all carousels on page load
- * Sets up initial state and responsive behavior
+ * All carousels show one slide at a time
  */
 function initializeCarousels() {
-    // Handle accessories and launches carousel responsive behavior
-    handleResponsiveCarousels();
+    // Initialize all carousels to show only active slide
+    const allCarousels = ['modifications-carousel', 'accessories-carousel', 'launches-carousel', 'insurance-carousel'];
     
-    // Update on window resize
-    window.addEventListener('resize', handleResponsiveCarousels);
-}
-
-/**
- * Handle responsive carousel display
- * Show grid on desktop, single slide on mobile
- */
-function handleResponsiveCarousels() {
-    const accessoriesCarousel = document.getElementById('accessories-carousel');
-    const launchesCarousel = document.getElementById('launches-carousel');
-    
-    const isMobile = window.innerWidth < 768;
-    
-    [accessoriesCarousel, launchesCarousel].forEach(carousel => {
-        if (carousel) {
-            if (isMobile) {
-                carousel.classList.add('showing-single');
-            } else {
-                carousel.classList.remove('showing-single');
-                // Show all slides on desktop
-                const slides = carousel.querySelectorAll('.carousel-slide');
-                slides.forEach(slide => {
-                    slide.style.display = 'block';
-                    slide.style.opacity = '1';
-                });
-            }
-        }
+    allCarousels.forEach(carouselId => {
+        updateCarouselDisplay(carouselId, 0);
     });
 }
 
