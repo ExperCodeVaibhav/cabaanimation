@@ -37,11 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.style.background = 'rgba(10, 10, 15, 0.95)';
-            header.style.boxShadow = '0 5px 30px rgba(0, 247, 255, 0.1)';
+            header.style.background = 'rgba(15, 15, 30, 0.95)';
         } else {
-            header.style.background = 'rgba(10, 10, 15, 0.8)';
-            header.style.boxShadow = 'none';
+            header.style.background = 'rgba(15, 15, 30, 0.9)';
         }
     });
     
