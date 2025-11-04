@@ -407,6 +407,104 @@ html {
     font-size: 0.95rem;
 }
 
+
+/* Two-card layout alignment fix */
+#modifications-carousel {
+  width: 200%; /* since 2 slides */
+}
+
+#modifications-carousel .carousel-slide {
+  display: flex;
+  flex-direction: row;
+  width: 50%; /* each slide takes half width */
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#modifications-carousel .carousel-slide.active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #modifications-carousel .carousel-slide {
+    flex-direction: column;
+    width: 100%;
+  }
+  #modifications-carousel {
+    width: 100%;
+  }
+}
+
+/* 3-card accessories carousel alignment fix */
+#accessories-carousel {
+  width: 200%; /* Two slides total */
+}
+
+#accessories-carousel .carousel-slide {
+  display: flex;
+  flex-direction: row;
+  width: 50%; /* Each slide takes half width */
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#accessories-carousel .carousel-slide.active {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  #accessories-carousel .carousel-slide {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  #accessories-carousel .carousel-slide {
+    flex-direction: column;
+    width: 100%;
+  }
+  #accessories-carousel {
+    width: 100%;
+  }
+}
+
+/* 3-card layout for New Launches */
+#launches-carousel {
+  width: 200%; /* Two slides total */
+}
+
+#launches-carousel .carousel-slide {
+  display: flex;
+  flex-direction: row;
+  width: 50%; /* Each slide = half width */
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#launches-carousel .carousel-slide.active {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  #launches-carousel .carousel-slide {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  #launches-carousel .carousel-slide {
+    flex-direction: column;
+    width: 100%;
+  }
+  #launches-carousel {
+    width: 100%;
+  }
+}
+
+
 /* Badges */
 .trending-badge {
     position: absolute;
@@ -899,4 +997,100 @@ html {
 
 .fade-in {
     animation: fadeIn 0.8s ease forwards;
+}
+
+
+/* ========================================
+   ABOUT SECTION - FIXED & RESPONSIVE
+======================================== */
+.about-palette {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-palette span {
+  position: relative;
+  z-index: 2;
+}
+
+.about-palette::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.about-palette.active::before,
+.about-palette:hover::before {
+  opacity: 0.25;
+}
+
+.about-palette.active {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(59,130,246,0.4);
+}
+
+#about-slider {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  width: 400%; /* 4 slides */
+}
+
+.about-slide {
+  width: 100%;
+  flex-shrink: 0;
+  padding-right: 1rem;
+  opacity: 0.85;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-slide.active {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  #about .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-palette {
+    width: 90px;
+    height: 90px;
+    font-size: 0.9rem;
+  }
+  .about-slide {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-palette {
+    width: 75px;
+    height: 75px;
+    font-size: 0.8rem;
+  }
+  .about-slide img {
+    max-height: 250px;
+    object-fit: cover;
+  }
 }

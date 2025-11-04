@@ -405,3 +405,35 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('%c CAABAA Landing Page ', 'background: linear-gradient(135deg, #00f7ff, #b800ff); color: white; font-size: 20px; padding: 10px; font-weight: bold;');
 console.log('%c Futuristic Car Modification Platform ', 'color: #00f7ff; font-size: 14px;');
 console.log('%c Built with HTML, CSS, JavaScript & Tailwind CSS ', 'color: #b0b0b0; font-size: 12px;');
+
+
+
+/* ========================================
+   ABOUT SECTION INTERACTION - FIXED
+======================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const palettes = document.querySelectorAll('.about-palette');
+  const slider = document.getElementById('about-slider');
+  const slides = slider.querySelectorAll('.about-slide');
+
+  palettes.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      // Update active palette
+      palettes.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Calculate new offset
+      const offset = -index * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+
+      // Update slide states
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    });
+  });
+
+  // Initialize to first slide
+  slides[0].classList.add('active');
+});
+
